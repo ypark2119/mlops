@@ -38,6 +38,6 @@ Each lab is designed to provide hands-on experience with key AI/MLOps tools.
 
 ---
 
-## Lab 1 - Introduction
-- Set up the scaffolding for the development of the course labs and class project with respect to file structure, documentation, and development environment.
+### Lab 1 - Introduction
+Set up the scaffolding for the development of the course labs and class project with respect to file structure, documentation, and development environment.
 
