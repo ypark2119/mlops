@@ -1,6 +1,6 @@
 # MSDS 603: Machine Learning Ops (Mlops)
 
-Welcome to Yewon Park's **MLOps** repository. This repository contains all the course materials, including labs, assignments, and project documentation.
+Welcome to Yewon Park's **MLOps** Lab repository. This repository contains all the course lab materials.
 
 ## 📌 Course Overview
 This course introduces students to **Artificial Intelligence (AI)** concepts, focusing on AI Entrepreneurship, Natural Language Processing (NLP), Reinforcement Learning, Computer Vision, and MLOps. Through hands-on labs and projects, students will gain experience in **end-to-end AI/ML workflows**, covering **data management, model deployment, and monitoring**.
