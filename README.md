@@ -22,7 +22,7 @@ Each lab is designed to provide hands-on experience with key AI/MLOps tools.
 
 | Week | Topic                                      | Lab |
 |------|--------------------------------------------|----------------------------------|
-| 1    | Dev Environment & Tools                    | [Lab 1 - Introduction](Labs/Notebooks/Lab_1_development.ipynb) |
+| 1    | Dev Environment & Tools                    | [Lab 1 - Introduction](Notebooks/Lab_1_development.ipynb) |
 | 2    | Experiment Tracking                        | `Lab 2 - Experiment Tracking` |
 | 3    | No Class                                   | - |
 | 4    | System Design & Harms Considerations      | No lab |
@@ -38,6 +38,6 @@ Each lab is designed to provide hands-on experience with key AI/MLOps tools.
 
 ---
 
-### [Lab 1 - Introduction](Labs/Notebooks/Lab_1_development.ipynb)
+### [Lab 1 - Introduction](Notebooks/Lab_1_development.ipynb)
 Set up the scaffolding for the development of the course labs and class project with respect to file structure, documentation, and development environment.
 
