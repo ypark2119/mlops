@@ -57,7 +57,8 @@ class TrainingFlow(FlowSpec):
                 else:
                     return {'loss': 1, 'status': STATUS_OK}
 
-                acc = cross_val_score(clf, X_train, y_train, cv=5).mean()
+                clf.fit(X_train, y_train)
+                acc = clf.score(X_train, y_train)
 
                 mlflow.set_tag("model_type", model_type)
                 mlflow.set_tag("feature_set", feature_set_name)

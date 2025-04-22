@@ -32,8 +32,8 @@ class ScoringFlow(FlowSpec):
                     best_run = run
 
         if best_run:
-            self.model_uri = f"runs:/{best_run.info.run_id}/final_model"
-            print(f"Best model found: {self.model_uri} with accuracy {best_accuracy:.4f}")
+            self.run_id = best_run.info.run_id
+            print(f"Best model found: {self.run_id} with accuracy {best_accuracy:.4f}")
         else:
             raise ValueError("No suitable model run with test_accuracy found.")
 
@@ -41,13 +41,22 @@ class ScoringFlow(FlowSpec):
 
     @step
     def load_model(self):
-        self.model = mlflow.sklearn.load_model(self.model_uri)
+        mlflow.set_tracking_uri("http://127.0.0.1:5050")
+
+        client = MlflowClient()
+        run = client.get_run(self.run_id)
+        artifact_uri = run.info.artifact_uri
+        model_path = f"{artifact_uri}/final_model"
+
+        print(f"Loading model from: {model_path}")
+        self.model = mlflow.sklearn.load_model(model_path)
+
         self.next(self.predict)
 
     @step
     def predict(self):
         self.predictions = self.model.predict(self.X_new)
-        print("Predictions on new data:", self.predictions)
+        print("Predictions on new data:", self.predictions.tolist())
         self.next(self.end)
 
     @step
