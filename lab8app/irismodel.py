@@ -5,7 +5,7 @@ import numpy as np
 
 app = FastAPI(
     title="Iris Classifier API",
-    description="Predict Iris species using a model loaded from a run artifact",
+    description="Predict Iris species using the best model from MLflow",
     version="0.1",
 )
 
